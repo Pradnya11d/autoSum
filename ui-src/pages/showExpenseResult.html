@@ -1,0 +1,27 @@
+<!-- ######################### kitchen sink ############################################################### -->
+                              <div class="row">
+                                    <div class="col-sm-12 col-xs-12">
+                                          <div class="panel panel-clean">
+                                                <div class="panel-heading"><h4>Expense Detail Table</h4></div>
+                                                <div class="panel-body">
+                                                      <table class="table table-striped">
+                                                              <tr>
+                                                                    <th>Date</th>
+                                                                    <th>Category</th>
+                                                                    <th>Amount</th>
+                                                                    <th>Type</th>
+                                                              </tr>
+                                                              <tbody ng-repeat= "x in expenses">
+                                                                    <tr>
+                                                                            <td>{{x.date}}</td>
+                                                                            <td>{{x.category}}</td>
+                                                                            <td>{{x.amount}}</td>
+                                                                            <td>{{x.type}}</td>
+                                                                    </tr>
+                                                              </tbody>
+                                                      </table>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+<!-- ######################### /#kitchen sink ############################################################# -->

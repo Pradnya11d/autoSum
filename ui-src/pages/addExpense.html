@@ -1,0 +1,69 @@
+<!-- ######################### kitchen sink ############################################################### -->
+                              <div class="row">
+                                    <div class="col-sm-12 col-xs-12">
+                                          <h2 class="text-center"> Create New Consumer </h2>
+                                          <br>
+                                          <div class="panel panel-clean">
+                                                <div class="panel-body">
+                                                      <div class="form-group">
+                                                            <form class="create" name="createForm" novalidate>
+                                                                  <div class="panel panel-body">
+                                                                        <div class="row">
+                                                                              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center">
+                                                                                    <label><strong>Date : </strong></label>
+                                                                              </div>
+                                                                              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center">
+                                                                                    <input type="date" class="form-control" name="date" id="date" placeholder="date" ng-model="addexpense.date" required />
+                                                                                        <div ng-show="createForm.$submitted || createForm.date.$touched" role="alert" >
+                                                                                            <span style="color:red" class="error" ng-show="createForm.date.$error.required">Please Provide Your Date</span>
+                                                                                        </div>
+                                                                              </div>
+                                                                              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center">
+                                                                                    <label><strong>Category :</strong></label>
+                                                                              </div>
+                                                                              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center">
+                                                                                    <input type="text" class="form-control" name="category" id="category" placeholder="Category" ng-model="addexpense.category" required>
+                                                                                        <div ng-show="createForm.submitted || createForm.category.$touched" role="alert" >
+                                                                                            <span style="color:red" class="error" ng-show="createForm.category.$error.required">Please Provide Your last name</span>
+                                                                                          </div>
+                                                                              </div>
+                                                                        </div>  <!-- End of row -->
+                                                                        <br><br>
+                                                                        <!-- <div class="panel panel-body"> -->
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                                                                                      <select ng-model="addexpense.type" ng-options="type for type in types" name="type" ng-change="update()" required>
+                                                                                            <option value="">Select type</option>
+                                                                                      </select>
+                                                                                          <div ng-show="createForm.Submit.$submitted || createForm.type.$touched" role="alert" >
+                                                                                                <span style="color:red" ng-show="createForm.type.$error.required">Please Select Site Name</span>
+                                                                                          </div>
+                                                                                </div>
+                                                                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center">
+                                                                                      <label><strong>Amount :</strong></label>
+                                                                                </div>
+                                                                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center">
+                                                                                      <input type="text" class="form-control" name="amount" id="amount" placeholder="Amount in Rupees" ng-model="addexpense.amount" required>
+                                                                                          <div ng-show="createForm.submitted || createForm.amount.$touched" role="alert" >
+                                                                                              <span style="color:red" class="error" ng-show="createForm.amount.$error.required">Please Provide Amount</span>
+                                                                                          </div>
+                                                                                </div>
+                                                                              </div>
+                                                                          </div>
+                                                          </form>
+                                                    </div>
+                                                    <div class="row">
+                                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+                                                                <button type="button" class="btn btn-warning" ng-click="back()">
+                                                                    Cancel
+                                                                </button>
+                                                          </div>
+                                                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+                                                                <input type="submit" class="btn btn-success" name="Submit" value="Submit" ng-click="submit()" ng-disabled="!createForm.$valid">
+                                                          </div>
+                                                    </div>
+                                              </div>
+                                        </div>
+                                  </div>
+                              </div>
+<!-- ######################### /#kitchen sink ############################################################# -->

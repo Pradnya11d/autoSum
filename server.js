@@ -21,9 +21,9 @@ app.use(morgan('combined', {stream: logger.stream}));
 
 // Get the port and host information from first env variable in OS
 // else from config file or else default to 3001 port and localhost
-var port = parseInt(process.env.PORT, 10) || config.iotaserverport || 3001;
+var port =  3001;
 
-var hostname = process.env.HOSTNAME || config.iotaserverhost || 'localhost';
+var hostname = 'localhost';
 
 
 var router = require('./router/main')(app);
@@ -40,4 +40,4 @@ app.use('/',function(err, req, res, next){
 
 module.exports = app;
 app.listen(port);
-logger.debug('iota api started on port ' + port);
+logger.debug(' api started on port ' + port);

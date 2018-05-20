@@ -4,9 +4,6 @@ var config = {
 		dbuser : 'root',
 		dbpwd : 'password',
 		dbschema : 'autoSum',
-		jwtsecret : 'pr1dnya',
-		maxinactivity: 1800000,
-		loginexpires: '4h',
    timezone: 'utc+05:30',
    dateStrings: true,
     log:{

@@ -22,13 +22,11 @@ function config($stateProvider, $urlRouterProvider){
 		}
 	})
 		.state('index.addExpense', {
-			parent:	'index',
 			url: '/add',
 			templateUrl : 'addExpense.html',
 			controller : 'AddExpenseCtrl'
 		})
 		.state('index.showExpense', {
-			parent:	'index',
 			url: '/getExpense',
 			templateUrl : 'showExpenseResult.html',
 			controller : 'showExpenseCtrl'
